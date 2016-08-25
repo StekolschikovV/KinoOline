@@ -1,0 +1,51 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 47px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: solid 1px #666;
+  color: #fff;
+}
+
+header #manuInfo {
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+}
+
+header #manuInfo h2 {
+  line-height: 0.2;
+}
+
+header #menuSearch {
+  height: 10px;
+  background: red;
+}
+
+header #manuLogo h1 {
+  line-height: 0;
+}
+
+header #manuLogo h1 a {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  transition-duration: 0.5s;
+}
+
+header #manuLogo h1 a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  text-shadow: #ff0047 1px 0px, #ff0047 1px 1px, #ff0047 0px 1px, #ff0047 -1px 1px, #ff0047 -1px 0px, #ff0047 -1px -1px, #ff0047 0px -1px, #ff0047 1px -1px;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  header #manuLogo {
+    text-align: center;
+  }
+}
