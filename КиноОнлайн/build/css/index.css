@@ -1,3 +1,11 @@
+* {
+  outline: none;
+}
+
+body {
+  background: black;
+}
+
 h1 {
   font-size: 20px;
 }
@@ -6,12 +14,16 @@ h2 {
   font-size: 14px;
 }
 
-* {
-  outline: none;
+h3 {
+  font-size: 12px;
 }
 
-body {
-  background: black;
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 header {
@@ -179,4 +191,91 @@ header #manuLogo h1 a:hover {
 section {
   height: 9000px;
   background-image: url(http://kino.yaljournal.ru/img/hillynnanor5.jpg);
+}
+
+a:hover > .hoverInfoTipR {
+  opacity: 1;
+}
+
+.hoverInfoTipR {
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  text-align: left;
+  padding: 10px 20px;
+  transition-duration: 0.5s;
+  opacity: 0;
+  position: absolute;
+  left: 95%;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 18px #333;
+  border-radius: 10px;
+  width: 390px;
+  height: 225px;
+  z-index: 9;
+}
+
+.hoverInfoTipR h2, .hoverInfoTipR h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  display: block !important;
+}
+
+.hoverInfoTipR .arrL {
+  position: absolute;
+  left: -25px;
+  z-index: 10;
+  border: 10px solid transparent;
+  border-right: 15px solid rgba(0, 0, 0, 0.8);
+}
+
+#popular .container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: solid 1px #666;
+  border-radius: 10px;
+  box-shadow: 0 0 18px #999;
+  font-size: 13px;
+  color: #fff;
+}
+
+#popular .container h2.title {
+  margin: 0 0 30px 0;
+  font-weight: bold;
+}
+
+#popular .container a {
+  position: relative;
+}
+
+#popular .container a img {
+  max-width: 90%;
+  min-width: 90%;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 7px #999;
+  transition-duration: 0.5s;
+}
+
+#popular .container a .filmTitle {
+  color: white;
+  border-bottom: 1px dashed white;
+  width: 50%;
+  display: inline-block;
+  transition-duration: 0.5s;
+  margin-top: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#popular a:hover > .filmTitle {
+  color: #ff0047 !important;
+  border-bottom: 1px dashed #ff0047 !important;
+  display: inline-block !important;
+}
+
+#popular a:hover > img {
+  border: 5px solid #ff0047 !important;
 }

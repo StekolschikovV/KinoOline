@@ -18,7 +18,7 @@ $( document ).ready(function () {
 
     $( window ).resize(function() {
         NOWSLIDE = 1;
-        $('#slider').animate({scrollLeft: 0 }, 500);
+        $('#slider').animate({scrollLeft: 0 }, 1000);
     });
 
 });
