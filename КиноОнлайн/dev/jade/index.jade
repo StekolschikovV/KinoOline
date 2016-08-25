@@ -14,11 +14,36 @@ html(lang='en')
           script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     body
         include global/header
+        include index/slider
+
+        section
+            #popular
+                .container
+                    .row
+                        .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                            h2.title  Популярные фильмы:
+
+                        a(href='#').col-xs-6.col-sm-3.col-md-3.col-lg-3
+                            img(src='http://kino.yaljournal.ru/image.php?id=cGFyaXpoLWdvcm9kLW1ydHZ5aA==|cG9zdGVyLmpwZw==|MTAwMDAx|163|234')
+                            .filmTitle dfsd
+                        a(href='#').col-xs-6.col-sm-3.col-md-3.col-lg-3
+                            img(src='http://kino.yaljournal.ru/image.php?id=cGFyaXpoLWdvcm9kLW1ydHZ5aA==|cG9zdGVyLmpwZw==|MTAwMDAx|163|234')
+                            .filmTitle dfsd
+                        a(href='#').col-xs-6.col-sm-3.col-md-3.col-lg-3
+                            img(src='http://kino.yaljournal.ru/image.php?id=cGFyaXpoLWdvcm9kLW1ydHZ5aA==|cG9zdGVyLmpwZw==|MTAwMDAx|163|234')
+                            .filmTitle dfsd
+                        a(href='#').col-xs-6.col-sm-3.col-md-3.col-lg-3
+                            img(src='http://kino.yaljournal.ru/image.php?id=cGFyaXpoLWdvcm9kLW1ydHZ5aA==|cG9zdGVyLmpwZw==|MTAwMDAx|163|234')
+                            .filmTitle dfsd
+
+
 
         // jQuery (necessary for Bootstrap's JavaScript plugins)
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
         // Include all compiled plugins (below), or include individual files as needed
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
 
+        link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', rel='stylesheet')
         link(href='css/index.css', rel='stylesheet')
+        script(src='script.js')
 
