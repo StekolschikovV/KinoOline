@@ -1,0 +1,42 @@
+
+#recommendedToYou
+  margin-top: 10vw
+  .container
+    @include blockStyle
+    img
+      border: 5px solid white
+      border-radius: 10px
+      max-width: 100%
+      transition-duration: 0.5s
+    a
+      .title
+        padding-top: 10px
+        color: white
+        display: inline-block
+        border-bottom: 1px dashed white
+        transition-duration: 0.5s
+      .hoverInfoTipL
+        left: -205% !important
+      .hoverInfoTipR
+        left: 100% !important
+      .hoverInfoTipB
+        margin-left: 10px
+        .arrB
+          border-bottom: 20px solid rgba(0, 0, 0, 0.6) !important
+          top: -29.5px !important
+#recommendedToYou a
+  transition-duration: 0s
+  overflow: hidden
+  &:hover
+    overflow: visible
+#recommendedToYou a:hover > img
+  border: 5px solid $color-pink
+#recommendedToYou a:hover > .title
+  color: $color-pink
+  border-bottom: 1px dashed $color-pink
+@media (max-width: 1200px)
+  #recommendedToYou
+    .title
+      margin-bottom: 10px
+    .hoverInfoTipR, .hoverInfoTipL, .hoverInfoTipB
+      display: none

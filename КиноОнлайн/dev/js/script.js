@@ -23,3 +23,35 @@ $( document ).ready(function () {
 
 });
 // slide //
+
+// video block show
+$( document ).ready(function () {
+    $( '.showHideVideoBlock' ).click(function () {
+        if ($( '.videoContainer' ).css("display") == 'block'){
+            var el = $('.videoContainer')
+            curHeight = el.height();
+            $('.videoContainer').height(curHeight).animate({height: '0'}, 500);
+            setTimeout(function(){
+                el.css('display', 'none');
+            }, 1000);
+        } else {
+            var el = $('.videoContainer')
+            el.css('display', 'block');
+            curHeight = el.height();
+            autoHeight = el.css('height', 'auto').height();
+            $('.videoContainer').height(curHeight).animate({height: autoHeight}, 500);
+            $('.videoContainer').animate({ marginBottom: '20px' }, 500);
+        }
+    });
+    $( window ).resize(function() {
+        if ($( '.videoContainer' ).css("display") == 'block'){
+            var el = $('.videoContainer');
+            el.css('display', 'block');
+            curHeight = el.height();
+            autoHeight = el.css('height', 'auto').height();
+            $('.videoContainer').height(curHeight).animate({height: autoHeight}, 0);
+            $('.videoContainer').animate({ marginBottom: '0px' }, 500);
+        }
+    });
+});
+// video block show //

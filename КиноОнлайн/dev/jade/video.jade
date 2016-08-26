@@ -1,0 +1,60 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Bootstrap 101 Template
+        // Bootstrap
+        link(href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', rel='stylesheet')
+        // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+        // WARNING: Respond.js doesn't work if you view the page via file://
+        //if lt IE 9
+          script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+          script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+    body
+        include global/header
+
+        section#video(style="background: url(http://kino.yaljournal.ru/image.php?id=ZXpoaWstYm9iYmkta29sdWNoaWUtcHJpa2x1Y2hlbml5YQ==|aHFkZWZhdWx0LmpwZw==|MTAwMDAx|290|158) no-repeat;")
+            .darkLayer
+                .container
+                    .row
+                        .col-xs-12.col-sm-12.col-md-12.col-lg-12.videoContainer
+                            img(src='http://kino.yaljournal.ru/image.php?id=c25vdWRlbg==|aHFkZWZhdWx0LmpwZw==|MTAwMDAx|290|158')
+                        .col-xs-12.col-sm-6.col-md-4.col-lg-3
+                            .poster
+                                img(src='http://kino.yaljournal.ru/image.php?id=ZHpob24tdWlr|cG9zdGVyLmpwZw==|MTAwMDAx|280|400')
+                        .col-xs-12.col-sm-6.col-md-8.col-lg-9
+                            .filmInfoRight
+                                h1.title Джон Уик
+                                h3.littleTitle Джон Уик
+                                .SL
+                                h2 Название: Джон Уик
+                                h2 Год выпуска: 2014
+                                h2 Страна: Китай, Канада, США
+                                h2 Жанр: боевик
+                                h2 Режисёр: Дэвид Лейтч, Чад Стахелски
+                                h2 В ролях: Киану Ривз, Микаэл Нюквист, Элфи Оуэн-Аллен, Уиллем Дефо, Дин Уинтерс, Эдрианн Палики, Омер Барнеа, Тоби Мур, Дэниэл Бернхард, Бриджет Мойнэхэн
+                                h2 Продолжительность: 101 мин.
+                                button.showHideVideoBlock
+                                    | Смотреть
+                                    i(aria-hidden="true" class="fa fa-play")
+                                h2 Джон Уик — бывший наемный убийца — ведет размеренную жизнь, когда преступник крадет его любимый Mustang 1969 года и попутно убивает собаку Дейзи, единственное живое напоминание об умершей жене. Жажда мести пробуждает в нем, казалось, утерянную хватку…
+
+
+
+        section
+            include video/like
+            include video/last
+            include video/recommendedToYou
+            include global/footer
+
+        // jQuery (necessary for Bootstrap's JavaScript plugins)
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+        // Include all compiled plugins (below), or include individual files as needed
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', rel='stylesheet')
+        link(href='css/video.css', rel='stylesheet')
+        script(src='script.js')
+        script(src='http://e-art.com.ru/wp-content/themes/e-art/js/jquery.smoothscroll/jquery.smoothscroll.js?ver=3.3')
+
