@@ -108,7 +108,6 @@ header #manuLogo h1 a:hover {
 
 #slider .slide .slideBG .titleBlock {
   position: absolute;
-  background: red;
   margin-left: 10%;
   margin-top: 50vh;
   color: #999;
@@ -116,6 +115,12 @@ header #manuLogo h1 a:hover {
   border: solid 1px #666;
   border-radius: 10px;
   box-shadow: 0 0 18px #999;
+  -webkit-animation-name: titleBlockShow;
+          animation-name: titleBlockShow;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 #slider .slide .slideBG .titleBlock h1, #slider .slide .slideBG .titleBlock h2 {
@@ -126,6 +131,7 @@ header #manuLogo h1 a:hover {
 
 #slider .slide .slideBG .textBlock {
   position: absolute;
+  z-index: 10;
   background: red;
   margin-left: 10%;
   margin-top: calc(50vh + 70px);
@@ -136,6 +142,12 @@ header #manuLogo h1 a:hover {
   box-shadow: 0 0 18px #999;
   padding-bottom: 40px;
   max-width: 50vw;
+  -webkit-animation-name: textBlockShow;
+          animation-name: textBlockShow;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
 }
 
 #slider .slide .slideBG .textBlock .text {
@@ -188,46 +200,100 @@ header #manuLogo h1 a:hover {
   }
 }
 
+@-webkit-keyframes titleBlockShow {
+  0% {
+    margin-left: -50%;
+    opacity: 0;
+  }
+  10% {
+    margin-left: -50%;
+    opacity: 0;
+  }
+  30% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+  70% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+  100% {
+    margin-left: -50%;
+    opacity: 0;
+  }
+}
+
+@keyframes titleBlockShow {
+  0% {
+    margin-left: -50%;
+    opacity: 0;
+  }
+  10% {
+    margin-left: -50%;
+    opacity: 0;
+  }
+  30% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+  70% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+  100% {
+    margin-left: -50%;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes textBlockShow {
+  0% {
+    margin-left: 50%;
+    opacity: 0;
+  }
+  10% {
+    margin-left: 50%;
+    opacity: 0;
+  }
+  30% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+  70% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 50%;
+    opacity: 0;
+  }
+}
+
+@keyframes textBlockShow {
+  0% {
+    margin-left: 50%;
+    opacity: 0;
+  }
+  10% {
+    margin-left: 50%;
+    opacity: 0;
+  }
+  30% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+  70% {
+    margin-left: 10%;
+    opacity: 1;
+  }
+  100% {
+    margin-left: 50%;
+    opacity: 0;
+  }
+}
+
 section {
-  height: 9000px;
   background-image: url(http://kino.yaljournal.ru/img/hillynnanor5.jpg);
-}
-
-a:hover > .hoverInfoTipR {
-  opacity: 1;
-}
-
-.hoverInfoTipR {
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  text-align: left;
-  padding: 10px 20px;
-  transition-duration: 0.5s;
-  opacity: 0;
-  position: absolute;
-  left: 95%;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 18px #333;
-  border-radius: 10px;
-  width: 390px;
-  height: 225px;
-  z-index: 9;
-}
-
-.hoverInfoTipR h2, .hoverInfoTipR h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  color: white;
-  display: block !important;
-}
-
-.hoverInfoTipR .arrL {
-  position: absolute;
-  left: -25px;
-  z-index: 10;
-  border: 10px solid transparent;
-  border-right: 15px solid rgba(0, 0, 0, 0.8);
 }
 
 #popular .container {
@@ -250,6 +316,7 @@ a:hover > .hoverInfoTipR {
 }
 
 #popular .container a img {
+  z-index: 0;
   max-width: 90%;
   min-width: 90%;
   border: 5px solid white;
@@ -259,6 +326,7 @@ a:hover > .hoverInfoTipR {
 }
 
 #popular .container a .filmTitle {
+  z-index: 0;
   color: white;
   border-bottom: 1px dashed white;
   width: 50%;
@@ -278,4 +346,229 @@ a:hover > .hoverInfoTipR {
 
 #popular a:hover > img {
   border: 5px solid #ff0047 !important;
+}
+
+a:hover > .hoverInfoTipR {
+  opacity: 1;
+}
+
+#popular a {
+  overflow: hidden;
+}
+
+#popular a:hover {
+  overflow: visible;
+}
+
+.hoverInfoTipR {
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  text-align: left;
+  padding: 10px 20px;
+  transition-duration: 0.5s;
+  opacity: 0;
+  position: absolute;
+  left: 95%;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 18px #333;
+  border-radius: 10px;
+  width: 390px;
+  height: 230px;
+  z-index: 99;
+}
+
+.hoverInfoTipR h2, .hoverInfoTipR h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  display: block !important;
+}
+
+.hoverInfoTipR .arrL {
+  top: 45%;
+  position: absolute;
+  left: -25px;
+  z-index: 10;
+  border: 10px solid transparent;
+  border-right: 15px solid rgba(0, 0, 0, 0.8);
+}
+
+.hoverInfoTipR button {
+  background: #000000;
+  background-image: linear-gradient(to bottom, #f06489 0%, #f06489 46%, #ff0048 51%, #ff0048 100%);
+  border-radius: 5px;
+  border: 0;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 15px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  font-weight: bold;
+}
+
+.hoverInfoTipR button:hover {
+  background: #000000;
+  background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
+  text-decoration: none;
+}
+
+.hoverInfoTipR button i {
+  margin-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  #popular .hoverInfoTipR {
+    display: none;
+  }
+}
+
+a:hover > .hoverInfoTipB {
+  opacity: 1;
+}
+
+#popular a {
+  overflow: hidden;
+}
+
+#popular a:hover {
+  overflow: visible;
+}
+
+.hoverInfoTipB {
+  bottom: -100%;
+  left: 0;
+  margin: auto;
+  text-align: left;
+  padding: 10px 20px;
+  transition-duration: 0.5s;
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 18px #333;
+  border-radius: 10px;
+  width: 390px;
+  height: 230px;
+  z-index: 99;
+}
+
+.hoverInfoTipB h2, .hoverInfoTipB h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  display: block !important;
+}
+
+.hoverInfoTipB .arrB {
+  position: absolute;
+  left: 80px;
+  margin: auto;
+  top: -25px;
+  z-index: 10;
+  border: 10px solid transparent;
+  border-bottom: 20px solid rgba(0, 0, 0, 0.8);
+}
+
+.hoverInfoTipB button {
+  background: #000000;
+  background-image: linear-gradient(to bottom, #f06489 0%, #f06489 46%, #ff0048 51%, #ff0048 100%);
+  border-radius: 5px;
+  border: 0;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 15px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  font-weight: bold;
+}
+
+.hoverInfoTipB button:hover {
+  background: #000000;
+  background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
+  text-decoration: none;
+}
+
+.hoverInfoTipB button i {
+  margin-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  #popular .hoverInfoTipB {
+    display: none;
+  }
+}
+
+a:hover > .hoverInfoTipL {
+  opacity: 1;
+}
+
+#popular a {
+  overflow: hidden;
+}
+
+#popular a:hover {
+  overflow: visible;
+}
+
+.hoverInfoTipL {
+  top: 0;
+  left: -200%;
+  margin: auto;
+  text-align: left;
+  padding: 10px 20px;
+  transition-duration: 0.5s;
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 18px #333;
+  border-radius: 10px;
+  width: 390px;
+  height: 230px;
+  z-index: 99;
+}
+
+.hoverInfoTipL h2, .hoverInfoTipL h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: white;
+  display: block !important;
+}
+
+.hoverInfoTipL .arrL {
+  position: absolute;
+  left: 100%;
+  margin: auto;
+  top: 45%;
+  z-index: 10;
+  border: 10px solid transparent;
+  border-left: 20px solid rgba(0, 0, 0, 0.8);
+}
+
+.hoverInfoTipL button {
+  background: #000000;
+  background-image: linear-gradient(to bottom, #f06489 0%, #f06489 46%, #ff0048 51%, #ff0048 100%);
+  border-radius: 5px;
+  border: 0;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 15px;
+  text-decoration: none;
+  transition-duration: 0.5s;
+  font-weight: bold;
+}
+
+.hoverInfoTipL button:hover {
+  background: #000000;
+  background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
+  text-decoration: none;
+}
+
+.hoverInfoTipL button i {
+  margin-left: 5px;
+}
+
+@media (max-width: 1200px) {
+  #popular .hoverInfoTipL {
+    display: none;
+  }
 }
