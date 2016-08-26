@@ -30,7 +30,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 99999;
   width: 100%;
   height: 47px;
   background-color: rgba(0, 0, 0, 0.7);
@@ -296,6 +296,10 @@ section {
   background-image: url(http://kino.yaljournal.ru/img/hillynnanor5.jpg);
 }
 
+#popular {
+  margin-top: 10vw;
+}
+
 #popular .container {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.01);
@@ -353,6 +357,7 @@ a:hover > .hoverInfoTipR {
 }
 
 #popular a {
+  transition-duration: 0s;
   overflow: hidden;
 }
 
@@ -366,7 +371,7 @@ a:hover > .hoverInfoTipR {
   margin: auto;
   text-align: left;
   padding: 10px 20px;
-  transition-duration: 0.5s;
+  transition-duration: 0s;
   opacity: 0;
   position: absolute;
   left: 95%;
@@ -571,4 +576,204 @@ a:hover > .hoverInfoTipL {
   #popular .hoverInfoTipL {
     display: none;
   }
+}
+
+#new {
+  margin-top: 10vw;
+}
+
+#new .container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: solid 1px #666;
+  border-radius: 10px;
+  box-shadow: 0 0 18px #999;
+  font-size: 13px;
+  color: #fff;
+}
+
+#new .container h2.title {
+  margin: 0 0 30px 0;
+  font-weight: bold;
+}
+
+#new .container hr {
+  width: 100%;
+  opacity: 0.5;
+  display: inline-block;
+  margin: 20px 0 10px 0;
+}
+
+#new .container .newFilm .text {
+  margin-top: 10px;
+  color: white;
+}
+
+#new .container .newFilm .title {
+  color: #ff0048;
+  display: inline-block;
+  border-bottom: 1px dashed #ff0048;
+  margin-bottom: 10px;
+  transition-duration: 0.5s;
+}
+
+#new .container .newFilm .imgBlock {
+  position: relative;
+}
+
+#new .container .newFilm .imgBlock img {
+  box-shadow: 0 0 7px #999;
+  max-width: 100%;
+  border: 5px solid white;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+#new .container .newFilm .imgBlock .hoverBlock {
+  background: black;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: 0.5s;
+  border: 0;
+  border-radius: 10px !important;
+}
+
+#new .container .newFilm .imgBlock .hoverBlock .playIco {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 0;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-left: 40px solid #333;
+  border-bottom: 20px solid transparent;
+}
+
+.newFilm:hover > .imgBlock .hoverBlock {
+  opacity: 0.9 !important;
+}
+
+.newFilm:hover > .title {
+  color: white !important;
+  border-bottom: 1px dashed white !important;
+}
+
+.newFilm:hover > .imgBlock img {
+  border: 5px solid #ff0048 !important;
+  box-shadow: 0 0 0 !important;
+}
+
+@media (max-width: 750px) {
+  #new .newFilm {
+    text-align: center;
+  }
+  #new hr {
+    display: none !important;
+  }
+}
+
+#recommended {
+  margin-top: 10vw;
+}
+
+#recommended .container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: solid 1px #666;
+  border-radius: 10px;
+  box-shadow: 0 0 18px #999;
+  font-size: 13px;
+  color: #fff;
+}
+
+#recommended .container h2.title {
+  margin: 0 0 30px 0;
+  font-weight: bold;
+}
+
+#recommended .container img {
+  border: 5px solid white;
+  border-radius: 10px;
+  max-width: 100%;
+  transition-duration: 0.5s;
+}
+
+#recommended .container a .title {
+  padding-top: 10px;
+  color: white;
+  display: inline-block;
+  border-bottom: 1px dashed white;
+  transition-duration: 0.5s;
+}
+
+#recommended .container a .hoverInfoTipL {
+  left: -205% !important;
+}
+
+#recommended .container a .hoverInfoTipR {
+  left: 100% !important;
+}
+
+#recommended .container a .hoverInfoTipB {
+  margin-left: 10px;
+}
+
+#recommended .container a .hoverInfoTipB .arrB {
+  border-bottom: 20px solid rgba(0, 0, 0, 0.6) !important;
+  top: -29.5px !important;
+}
+
+#recommended a {
+  transition-duration: 0s;
+  overflow: hidden;
+}
+
+#recommended a:hover {
+  overflow: visible;
+}
+
+#recommended a:hover > img {
+  border: 5px solid #ff0048;
+}
+
+#recommended a:hover > .title {
+  color: #ff0048;
+  border-bottom: 1px dashed #ff0048;
+}
+
+@media (max-width: 1200px) {
+  #recommended .title {
+    margin-bottom: 10px;
+  }
+  #recommended .hoverInfoTipR, #recommended .hoverInfoTipL, #recommended .hoverInfoTipB {
+    display: none;
+  }
+}
+
+footer {
+  margin-top: 10vw;
+  height: 47px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top: solid 1px #666;
+  color: #fff;
+}
+
+footer h2 {
+  line-height: 0.5;
+}
+
+footer h2 .counter {
+  width: 100%;
+  height: 20px;
+  background: red;
+  margin: 0;
+  padding: 0;
 }
