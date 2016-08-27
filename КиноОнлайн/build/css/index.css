@@ -26,6 +26,84 @@ a:hover {
   text-decoration: none;
 }
 
+#sixBlock {
+  margin-top: 10vw;
+}
+
+#sixBlock .container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: solid 1px #666;
+  border-radius: 10px;
+  box-shadow: 0 0 18px #999;
+  font-size: 13px;
+  color: #fff;
+}
+
+#sixBlock .container h2.title {
+  margin: 0 0 30px 0;
+  font-weight: bold;
+}
+
+#sixBlock .container img {
+  border: 5px solid white;
+  border-radius: 10px;
+  max-width: 100%;
+  transition-duration: 0.5s;
+}
+
+#sixBlock .container a .title {
+  padding-top: 10px;
+  color: white;
+  display: inline-block;
+  border-bottom: 1px dashed white;
+  transition-duration: 0.5s;
+}
+
+#sixBlock .container a .hoverInfoTipL {
+  left: -205% !important;
+}
+
+#sixBlock .container a .hoverInfoTipR {
+  left: 100% !important;
+}
+
+#sixBlock .container a .hoverInfoTipB {
+  margin-left: 10px;
+}
+
+#sixBlock .container a .hoverInfoTipB .arrB {
+  border-bottom: 20px solid rgba(0, 0, 0, 0.6) !important;
+  top: -29.5px !important;
+}
+
+#sixBlock a {
+  transition-duration: 0s;
+  overflow: hidden;
+}
+
+#sixBlock a:hover {
+  overflow: visible;
+}
+
+#sixBlock a:hover > img {
+  border: 5px solid #ff0048;
+}
+
+#sixBlock a:hover > .title {
+  color: #ff0048;
+  border-bottom: 1px dashed #ff0048;
+}
+
+@media (max-width: 1200px) {
+  #sixBlock .title {
+    margin-bottom: 10px;
+  }
+  #sixBlock .hoverInfoTipR, #sixBlock .hoverInfoTipL, #sixBlock .hoverInfoTipB {
+    display: none;
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -296,288 +374,6 @@ section {
   background-image: url(http://kino.yaljournal.ru/img/hillynnanor5.jpg);
 }
 
-#popular {
-  margin-top: 10vw;
-}
-
-#popular .container {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.01);
-  border: solid 1px #666;
-  border-radius: 10px;
-  box-shadow: 0 0 18px #999;
-  font-size: 13px;
-  color: #fff;
-}
-
-#popular .container h2.title {
-  margin: 0 0 30px 0;
-  font-weight: bold;
-}
-
-#popular .container a {
-  position: relative;
-}
-
-#popular .container a img {
-  z-index: 0;
-  max-width: 90%;
-  min-width: 90%;
-  border: 5px solid white;
-  border-radius: 10px;
-  box-shadow: 0 0 7px #999;
-  transition-duration: 0.5s;
-}
-
-#popular .container a .filmTitle {
-  z-index: 0;
-  color: white;
-  border-bottom: 1px dashed white;
-  width: 50%;
-  display: inline-block;
-  transition-duration: 0.5s;
-  margin-top: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-#popular a:hover > .filmTitle {
-  color: #ff0047 !important;
-  border-bottom: 1px dashed #ff0047 !important;
-  display: inline-block !important;
-}
-
-#popular a:hover > img {
-  border: 5px solid #ff0047 !important;
-}
-
-a:hover > .hoverInfoTipR {
-  opacity: 1;
-}
-
-#popular a {
-  transition-duration: 0s;
-  overflow: hidden;
-}
-
-#popular a:hover {
-  overflow: visible;
-}
-
-.hoverInfoTipR {
-  bottom: 0;
-  top: 0;
-  margin: auto;
-  text-align: left;
-  padding: 10px 20px;
-  transition-duration: 0s;
-  opacity: 0;
-  position: absolute;
-  left: 95%;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 18px #333;
-  border-radius: 10px;
-  width: 390px;
-  height: 230px;
-  z-index: 99;
-}
-
-.hoverInfoTipR h2, .hoverInfoTipR h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  color: white;
-  display: block !important;
-}
-
-.hoverInfoTipR .arrL {
-  top: 45%;
-  position: absolute;
-  left: -25px;
-  z-index: 10;
-  border: 10px solid transparent;
-  border-right: 15px solid rgba(0, 0, 0, 0.8);
-}
-
-.hoverInfoTipR button {
-  background: #000000;
-  background-image: linear-gradient(to bottom, #f06489 0%, #f06489 46%, #ff0048 51%, #ff0048 100%);
-  border-radius: 5px;
-  border: 0;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 5px 15px;
-  text-decoration: none;
-  transition-duration: 0.5s;
-  font-weight: bold;
-}
-
-.hoverInfoTipR button:hover {
-  background: #000000;
-  background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
-  text-decoration: none;
-}
-
-.hoverInfoTipR button i {
-  margin-left: 5px;
-}
-
-@media (max-width: 1200px) {
-  #popular .hoverInfoTipR {
-    display: none;
-  }
-}
-
-a:hover > .hoverInfoTipB {
-  opacity: 1;
-}
-
-#popular a {
-  overflow: hidden;
-}
-
-#popular a:hover {
-  overflow: visible;
-}
-
-.hoverInfoTipB {
-  bottom: -100%;
-  left: 0;
-  margin: auto;
-  text-align: left;
-  padding: 10px 20px;
-  transition-duration: 0.5s;
-  opacity: 0;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 18px #333;
-  border-radius: 10px;
-  width: 390px;
-  height: 230px;
-  z-index: 99;
-}
-
-.hoverInfoTipB h2, .hoverInfoTipB h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  color: white;
-  display: block !important;
-}
-
-.hoverInfoTipB .arrB {
-  position: absolute;
-  left: 80px;
-  margin: auto;
-  top: -25px;
-  z-index: 10;
-  border: 10px solid transparent;
-  border-bottom: 20px solid rgba(0, 0, 0, 0.8);
-}
-
-.hoverInfoTipB button {
-  background: #000000;
-  background-image: linear-gradient(to bottom, #f06489 0%, #f06489 46%, #ff0048 51%, #ff0048 100%);
-  border-radius: 5px;
-  border: 0;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 5px 15px;
-  text-decoration: none;
-  transition-duration: 0.5s;
-  font-weight: bold;
-}
-
-.hoverInfoTipB button:hover {
-  background: #000000;
-  background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
-  text-decoration: none;
-}
-
-.hoverInfoTipB button i {
-  margin-left: 5px;
-}
-
-@media (max-width: 1200px) {
-  #popular .hoverInfoTipB {
-    display: none;
-  }
-}
-
-a:hover > .hoverInfoTipL {
-  opacity: 1;
-}
-
-#popular a {
-  overflow: hidden;
-}
-
-#popular a:hover {
-  overflow: visible;
-}
-
-.hoverInfoTipL {
-  top: 0;
-  left: -200%;
-  margin: auto;
-  text-align: left;
-  padding: 10px 20px;
-  transition-duration: 0.5s;
-  opacity: 0;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 18px #333;
-  border-radius: 10px;
-  width: 390px;
-  height: 230px;
-  z-index: 99;
-}
-
-.hoverInfoTipL h2, .hoverInfoTipL h3 {
-  margin-top: 5px;
-  margin-bottom: 5px;
-  color: white;
-  display: block !important;
-}
-
-.hoverInfoTipL .arrL {
-  position: absolute;
-  left: 100%;
-  margin: auto;
-  top: 45%;
-  z-index: 10;
-  border: 10px solid transparent;
-  border-left: 20px solid rgba(0, 0, 0, 0.8);
-}
-
-.hoverInfoTipL button {
-  background: #000000;
-  background-image: linear-gradient(to bottom, #f06489 0%, #f06489 46%, #ff0048 51%, #ff0048 100%);
-  border-radius: 5px;
-  border: 0;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 5px 15px;
-  text-decoration: none;
-  transition-duration: 0.5s;
-  font-weight: bold;
-}
-
-.hoverInfoTipL button:hover {
-  background: #000000;
-  background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
-  text-decoration: none;
-}
-
-.hoverInfoTipL button i {
-  margin-left: 5px;
-}
-
-@media (max-width: 1200px) {
-  #popular .hoverInfoTipL {
-    display: none;
-  }
-}
-
 #new {
   margin-top: 10vw;
 }
@@ -680,11 +476,11 @@ a:hover > .hoverInfoTipL {
   }
 }
 
-#recommended {
+#recommendedToYou {
   margin-top: 10vw;
 }
 
-#recommended .container {
+#recommendedToYou .container {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.01);
   border: solid 1px #666;
@@ -694,19 +490,19 @@ a:hover > .hoverInfoTipL {
   color: #fff;
 }
 
-#recommended .container h2.title {
+#recommendedToYou .container h2.title {
   margin: 0 0 30px 0;
   font-weight: bold;
 }
 
-#recommended .container img {
+#recommendedToYou .container img {
   border: 5px solid white;
   border-radius: 10px;
   max-width: 100%;
   transition-duration: 0.5s;
 }
 
-#recommended .container a .title {
+#recommendedToYou .container a .title {
   padding-top: 10px;
   color: white;
   display: inline-block;
@@ -714,46 +510,46 @@ a:hover > .hoverInfoTipL {
   transition-duration: 0.5s;
 }
 
-#recommended .container a .hoverInfoTipL {
+#recommendedToYou .container a .hoverInfoTipL {
   left: -205% !important;
 }
 
-#recommended .container a .hoverInfoTipR {
+#recommendedToYou .container a .hoverInfoTipR {
   left: 100% !important;
 }
 
-#recommended .container a .hoverInfoTipB {
+#recommendedToYou .container a .hoverInfoTipB {
   margin-left: 10px;
 }
 
-#recommended .container a .hoverInfoTipB .arrB {
+#recommendedToYou .container a .hoverInfoTipB .arrB {
   border-bottom: 20px solid rgba(0, 0, 0, 0.6) !important;
   top: -29.5px !important;
 }
 
-#recommended a {
+#recommendedToYou a {
   transition-duration: 0s;
   overflow: hidden;
 }
 
-#recommended a:hover {
+#recommendedToYou a:hover {
   overflow: visible;
 }
 
-#recommended a:hover > img {
+#recommendedToYou a:hover > img {
   border: 5px solid #ff0048;
 }
 
-#recommended a:hover > .title {
+#recommendedToYou a:hover > .title {
   color: #ff0048;
   border-bottom: 1px dashed #ff0048;
 }
 
 @media (max-width: 1200px) {
-  #recommended .title {
+  #recommendedToYou .title {
     margin-bottom: 10px;
   }
-  #recommended .hoverInfoTipR, #recommended .hoverInfoTipL, #recommended .hoverInfoTipB {
+  #recommendedToYou .hoverInfoTipR, #recommendedToYou .hoverInfoTipL, #recommendedToYou .hoverInfoTipB {
     display: none;
   }
 }

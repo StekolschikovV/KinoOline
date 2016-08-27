@@ -16,10 +16,10 @@ html(lang='en')
         include global/header
         include index/slider
         section
-            include index/popular
+            - var sixBlockTitle = "Популярные фильмы:";
+            include global/sixBlock
             include index/new
-            include index/recommended
             include global/footer
 
-         - var pageLink = "css/index.css";
+        - var pageLink = "css/index.css";
         include global/scriptAndLink
