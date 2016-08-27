@@ -30,44 +30,20 @@ $color-pink: #ff0048
     text-decoration: none
   i
     margin-left: $iMarginLeft
-//mixins //
-
-//global style
-*
-  outline: none
-body
-  background: black
-h1
-  font-size: 20px
-h2
-  font-size: 14px
-h3
-  font-size: 12px
-a
-  text-decoration: none
-  &:hover
-    text-decoration: none
-//global style //
-
-//import
+//mixins
+@import "global/global"
 @import "global/header"
 @import "index/slider"
-//import //
+
 
 section
   background-image: url(http://kino.yaljournal.ru/img/hillynnanor5.jpg)
-<<<<<<< HEAD
-=======
-
-//import
-@import "index/popular"
->>>>>>> parent of 4692a07... better structure jade
 @import "index/new"
 //@import "global/sixBlock"
-@import "video/recommendedToYou"
-
 @import "global/footer"
-//import //
+
+
+
 
 
 

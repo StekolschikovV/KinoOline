@@ -19,12 +19,13 @@ html(lang='en')
             - var sixBlockTitle = "Популярные фильмы:";
             include global/sixBlock
             include index/new
+            - var sixBlockTitle = "Рекомендуем лично Вам:";
+            include global/sixBlock
             include global/footer
 
-<<<<<<< HEAD
+
         - var pageLink = "css/index.css";
-        include global/scriptAndLink
-=======
+        //include global/scriptAndLink
         // jQuery (necessary for Bootstrap's JavaScript plugins)
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
         // Include all compiled plugins (below), or include individual files as needed
@@ -34,4 +35,3 @@ html(lang='en')
         script(src='script.js')
         script(src='http://e-art.com.ru/wp-content/themes/e-art/js/jquery.smoothscroll/jquery.smoothscroll.js?ver=3.3')
 
->>>>>>> parent of 4692a07... better structure jade
