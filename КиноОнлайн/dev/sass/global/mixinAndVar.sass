@@ -1,0 +1,30 @@
+$color-pink: #ff0048
+
+@mixin blockStyle
+  padding: 20px
+  background-color: rgba(0, 0, 0, 0.01)
+  border: solid 1px #666
+  border-radius: 10px
+  box-shadow: 0 0 18px #999
+  font-size: 13px
+  color: #fff
+  h2.title
+    margin: 0 0 30px 0
+    font-weight: bold
+@mixin buttonPink($fontSize, $iMarginLeft)
+  background: #000000
+  background-image: linear-gradient(to bottom, rgba(240,100,137,1) 0%, rgba(240,100,137,1) 46%, rgba(255,0,72,1) 51%, rgba(255,0,72,1) 100%)
+  border-radius: 5px
+  border: 0
+  color: #ffffff
+  font-size: $fontSize
+  padding: 5px 15px
+  text-decoration: none
+  transition-duration: 0.5s
+  font-weight: bold
+  &:hover
+    background: #000000
+    background-image: linear-gradient(to bottom, rgba(73,73,73,1) 0%, rgba(73,73,73,1) 46%, rgba(0,0,0,1) 51%, rgba(0,0,0,1) 100%)
+    text-decoration: none
+  i
+    margin-left: $iMarginLeft
