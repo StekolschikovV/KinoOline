@@ -26,84 +26,6 @@ a:hover {
   text-decoration: none;
 }
 
-#sixBlock {
-  margin-top: 10vw;
-}
-
-#sixBlock .container {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.01);
-  border: solid 1px #666;
-  border-radius: 10px;
-  box-shadow: 0 0 18px #999;
-  font-size: 13px;
-  color: #fff;
-}
-
-#sixBlock .container h2.title {
-  margin: 0 0 30px 0;
-  font-weight: bold;
-}
-
-#sixBlock .container img {
-  border: 5px solid white;
-  border-radius: 10px;
-  max-width: 100%;
-  transition-duration: 0.5s;
-}
-
-#sixBlock .container a .title {
-  padding-top: 10px;
-  color: white;
-  display: inline-block;
-  border-bottom: 1px dashed white;
-  transition-duration: 0.5s;
-}
-
-#sixBlock .container a .hoverInfoTipL {
-  left: -205% !important;
-}
-
-#sixBlock .container a .hoverInfoTipR {
-  left: 100% !important;
-}
-
-#sixBlock .container a .hoverInfoTipB {
-  margin-left: 10px;
-}
-
-#sixBlock .container a .hoverInfoTipB .arrB {
-  border-bottom: 20px solid rgba(0, 0, 0, 0.6) !important;
-  top: -29.5px !important;
-}
-
-#sixBlock a {
-  transition-duration: 0s;
-  overflow: hidden;
-}
-
-#sixBlock a:hover {
-  overflow: visible;
-}
-
-#sixBlock a:hover > img {
-  border: 5px solid #ff0048;
-}
-
-#sixBlock a:hover > .title {
-  color: #ff0048;
-  border-bottom: 1px dashed #ff0048;
-}
-
-@media (max-width: 1200px) {
-  #sixBlock .title {
-    margin-bottom: 10px;
-  }
-  #sixBlock .hoverInfoTipR, #sixBlock .hoverInfoTipL, #sixBlock .hoverInfoTipB {
-    display: none;
-  }
-}
-
 header {
   position: fixed;
   top: 0;
@@ -519,7 +441,7 @@ a:hover > .hoverInfoTipB {
 }
 
 .hoverInfoTipB {
-  bottom: -90%;
+  bottom: -100%;
   left: 0;
   margin: auto;
   text-align: left;
@@ -837,7 +759,7 @@ a:hover > .hoverInfoTipL {
 }
 
 footer {
-  margin-top: 14vw;
+  margin-top: 10vw;
   height: 47px;
   background-color: rgba(0, 0, 0, 0.7);
   border-top: solid 1px #666;
