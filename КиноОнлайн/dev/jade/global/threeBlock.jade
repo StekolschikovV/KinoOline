@@ -1,0 +1,53 @@
+mixin thisBlock
+    .container
+        .row
+            if threeBlockTitle
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                    h2.title= threeBlockTitle
+            if threeBlockArchive
+                .col-xs-12.col-sm-12.col-md-12.col-lg-12.text-center
+                    h2.title= threeBlockArchive
+            if threeBlockTopArr
+                .threeBlockTopArr
+                    .col-xs-6.col-sm-6.col-md-6.col-lg-6.text-left
+                        a(href='#')
+                            h2 « Раньше
+                    .col-xs-6.col-sm-6.col-md-6.col-lg-6.text-right
+                        a(href='#')
+                            h2 Позже »
+            - var n = 0
+            if threeBlockCounter
+                while n < threeBlockCounter * 3
+                    span.hide= n++
+                    mixin newFilm
+                        a(href='#').col-xs-12.col-sm-4.col-md-4.col-lg-4.newFilm
+                            .title Глубоководный горизонт
+                            .imgBlock
+                                img(src='http://kino.yaljournal.ru/image.php?id=a3JleXNlcg==|aHFkZWZhdWx0LmpwZw==|MTAwMDAx|290|158')
+                                .hoverBlock
+                                    .playIco
+                            .text Лето 1945 года. До конца Второй мировой оставались считанные недели… Крейсер ВМС США «Индианополис» доставил на американскую военную ...
+                    +newFilm
+                    +newFilm
+                    +newFilm
+                    if n < threeBlockCounter * 3
+                        hr
+            if showAll
+                .showAllFilms
+                    h2
+                        a(href='#') Смотреть все »
+            if threeBlockBottomArr
+                .threeBlockBottomArr
+                    .col-xs-6.col-sm-6.col-md-6.col-lg-6.text-left
+                        a(href='#')
+                            h2 « Раньше
+                    .col-xs-6.col-sm-6.col-md-6.col-lg-6.text-right
+                        a(href='#')
+                            h2 Позже »
+
+if threeBlockFirst
+    #threeBlock.threeBlockFirst
+        +thisBlock
+else
+    #threeBlock
+        +thisBlock

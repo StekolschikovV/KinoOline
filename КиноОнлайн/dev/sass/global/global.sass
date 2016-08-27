@@ -1,3 +1,5 @@
+$block-margin-top: 15vw
+
 *
   outline: none
 body
@@ -15,7 +17,7 @@ a
 
 //sixBlock
 #sixBlock
-  margin-top: 10vw
+  margin-top: $block-margin-top
   .container
     @include blockStyle
     a
@@ -39,7 +41,6 @@ a
         text-overflow: ellipsis
         white-space: nowrap
         overflow: hidden
-
 #sixBlock a:hover > .filmTitle
   color: #ff0047 !important
   border-bottom: 1px dashed #ff0047 !important
@@ -169,3 +170,119 @@ a:hover > .hoverInfoTipL
     .hoverInfoTipL
       display: none
 //sixBlock //
+
+
+//threeBlock
+.threeBlockFirst
+  margin-top: 60px !important
+#threeBlock
+  margin-top: $block-margin-top
+  .threeBlockTopArr, .threeBlockBottomArr
+    h2
+      display: inline-block
+      border-bottom: dotted 1px #fff
+      color: white
+      transition-duration: 0.5s
+      &:hover
+        color: #ff0047
+        border-bottom: solid 1px #ff0047
+  .showAllFilms
+    float: right
+    padding: 10px 20px 0px 20px
+    display: inline-block
+    h2
+      a
+        color: white
+        border-bottom: dotted 1px #fff
+        transition-duration: 0.5s
+        &:hover
+          color: #ff0047
+          border-bottom: solid 1px #ff0047
+
+  .container
+
+    @include blockStyle
+    hr
+      width: 100%
+      opacity: 0.5
+      display: inline-block
+      margin: 20px 0 10px 0
+    .newFilm
+      .text
+        margin-top: 10px
+        color: white
+      .title
+        color: $color-pink
+        display: inline-block
+        border-bottom: 1px dashed $color-pink
+        margin-bottom: 10px
+        transition-duration: 0.5s
+      .imgBlock
+        position: relative
+        img
+          box-shadow: 0 0 7px #999
+          max-width: 100%
+          border: 5px solid white
+          border-radius: 10px
+          transition-duration: 0.5s
+        .hoverBlock
+          background: black
+          width: 100%
+          height: 100%
+          display: block
+          position: absolute
+          top: 0
+          left: 0
+          opacity: 0
+          transition-duration: 0.5s
+          border: 0
+          border-radius: 10px !important
+          .playIco
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            margin: auto
+            height: 0
+            width: 0
+            border-top: 20px solid transparent
+            border-left: 40px solid #333
+            border-bottom: 20px solid transparent
+.newFilm:hover > .imgBlock .hoverBlock
+  opacity: 0.9 !important
+.newFilm:hover > .title
+  color: white !important
+  border-bottom: 1px dashed white !important
+.newFilm:hover > .imgBlock img
+  border: 5px solid $color-pink !important
+  box-shadow: 0 0 0 !important
+@media (max-width: 750px)
+  #threeBlock
+    .newFilm
+      text-align: center
+    hr
+      display: none !important
+//threeBlock //
+
+//footer
+footer
+  margin-top: $block-margin-top
+  height: 47px
+  background-color: rgba(0, 0, 0, 0.7)
+  border-top: solid 1px #666
+  color: #fff
+  h2
+    line-height: 0.5
+    .counter
+      width: 100%
+      height: 20px
+      background: red
+      margin: 0
+      padding: 0
+@media (max-width: 750px)
+  footer
+    *
+      text-align: center !important
+
+//footer //

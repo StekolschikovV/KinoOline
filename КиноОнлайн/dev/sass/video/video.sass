@@ -1,0 +1,56 @@
+#video
+  background-position: center!important
+  background-size: cover !important
+  .container
+    background-color: rgba(0, 0, 0, 0.50)
+    border: solid 1px #666
+    border-radius: 10px
+    box-shadow: 0 0 18px #999
+    font-size: 13px
+    color: #fff
+    padding: 20px
+  .videoContainer
+    margin: 0
+    height: 0px
+    display: none
+    overflow: hidden
+    transition-duration: 0.5s
+    img
+      //display: none
+      //height: 0px
+      border-radius: 10px
+      width: 100%
+  .darkLayer
+    padding-top: 15vh
+    min-height: 80vh
+    display: block
+    box-shadow: inset 0px 0px 150px 100px rgb(0, 0, 0)
+    .poster
+      img
+        border-radius: 10px
+        width: 100%
+        max-width: 350px
+    .filmInfoRight
+      h1, h2, h3
+        //line-height: 0.9
+        margin: 5px 0
+      .SL
+        height: 20px
+        width: 100%
+        background: red
+      button
+        margin: 10px 0px
+        @include buttonPink(14px, 10px)
+
+.showVideoContainer
+  transition-duration: 0.5s
+  //display: block !important
+  height: auto !important
+@media (max-width: 992px)
+  #video
+    .darkLayer
+      padding-top: 70px
+@media (max-width: 768px)
+  #video
+    *
+      text-align: center

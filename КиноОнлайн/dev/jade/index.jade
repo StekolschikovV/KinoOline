@@ -17,8 +17,15 @@ html(lang='en')
         include index/slider
         section
             - var sixBlockTitle = "Популярные фильмы:";
+            - var sixBlockCounter = 1;
+            - var showAll = true;
             include global/sixBlock
-            include index/new
+            - var threeBlockTitle = "Новинки кино:";
+            - var threeBlockCounter = 1;
+            - var threeBlockTopArr = false;
+            - var threeBlockBottomArr = false;
+            - var threeBlockFirst = false;
+            include global/threeBlock
             - var sixBlockTitle = "Рекомендуем лично Вам:";
             include global/sixBlock
             include global/footer

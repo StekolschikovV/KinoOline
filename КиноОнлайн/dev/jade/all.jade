@@ -14,15 +14,12 @@ html(lang='en')
           script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
     body
         include global/header
-        include video/video
         section
-            - var sixBlockTitle = "Популярные фильмы:";
-            - var sixBlockCounter = 1;
-            include global/sixBlock
-            - var threeBlockCounter = 1;
-            - var threeBlockTopArr = false;
-            - var threeBlockBottomArr = false;
-            - var threeBlockFirst = false;
+            - var threeBlockCounter = 2;
+            - var threeBlockTopArr = true;
+            - var threeBlockBottomArr = true;
+            - var threeBlockFirst = true;
+            - var threeBlockArchive = "Архив онлайн фильмов - Стр.1";
             include global/threeBlock
             - var sixBlockTitle = "Рекомендуем лично Вам:";
             include global/sixBlock

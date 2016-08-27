@@ -27,7 +27,7 @@ a:hover {
 }
 
 #sixBlock {
-  margin-top: 10vw;
+  margin-top: 15vw;
 }
 
 #sixBlock .container {
@@ -308,6 +308,167 @@ a:hover > .hoverInfoTipL {
   }
 }
 
+.threeBlockFirst {
+  margin-top: 60px !important;
+}
+
+#threeBlock {
+  margin-top: 15vw;
+}
+
+#threeBlock .threeBlockTopArr h2, #threeBlock .threeBlockBottomArr h2 {
+  display: inline-block;
+  border-bottom: dotted 1px #fff;
+  color: white;
+  transition-duration: 0.5s;
+}
+
+#threeBlock .threeBlockTopArr h2:hover, #threeBlock .threeBlockBottomArr h2:hover {
+  color: #ff0047;
+  border-bottom: solid 1px #ff0047;
+}
+
+#threeBlock .showAllFilms {
+  float: right;
+  padding: 10px 20px 0px 20px;
+  display: inline-block;
+}
+
+#threeBlock .showAllFilms h2 a {
+  color: white;
+  border-bottom: dotted 1px #fff;
+  transition-duration: 0.5s;
+}
+
+#threeBlock .showAllFilms h2 a:hover {
+  color: #ff0047;
+  border-bottom: solid 1px #ff0047;
+}
+
+#threeBlock .container {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.01);
+  border: solid 1px #666;
+  border-radius: 10px;
+  box-shadow: 0 0 18px #999;
+  font-size: 13px;
+  color: #fff;
+}
+
+#threeBlock .container h2.title {
+  margin: 0 0 30px 0;
+  font-weight: bold;
+}
+
+#threeBlock .container hr {
+  width: 100%;
+  opacity: 0.5;
+  display: inline-block;
+  margin: 20px 0 10px 0;
+}
+
+#threeBlock .container .newFilm .text {
+  margin-top: 10px;
+  color: white;
+}
+
+#threeBlock .container .newFilm .title {
+  color: #ff0048;
+  display: inline-block;
+  border-bottom: 1px dashed #ff0048;
+  margin-bottom: 10px;
+  transition-duration: 0.5s;
+}
+
+#threeBlock .container .newFilm .imgBlock {
+  position: relative;
+}
+
+#threeBlock .container .newFilm .imgBlock img {
+  box-shadow: 0 0 7px #999;
+  max-width: 100%;
+  border: 5px solid white;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+#threeBlock .container .newFilm .imgBlock .hoverBlock {
+  background: black;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition-duration: 0.5s;
+  border: 0;
+  border-radius: 10px !important;
+}
+
+#threeBlock .container .newFilm .imgBlock .hoverBlock .playIco {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 0;
+  width: 0;
+  border-top: 20px solid transparent;
+  border-left: 40px solid #333;
+  border-bottom: 20px solid transparent;
+}
+
+.newFilm:hover > .imgBlock .hoverBlock {
+  opacity: 0.9 !important;
+}
+
+.newFilm:hover > .title {
+  color: white !important;
+  border-bottom: 1px dashed white !important;
+}
+
+.newFilm:hover > .imgBlock img {
+  border: 5px solid #ff0048 !important;
+  box-shadow: 0 0 0 !important;
+}
+
+@media (max-width: 750px) {
+  #threeBlock .newFilm {
+    text-align: center;
+  }
+  #threeBlock hr {
+    display: none !important;
+  }
+}
+
+footer {
+  margin-top: 15vw;
+  height: 47px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top: solid 1px #666;
+  color: #fff;
+}
+
+footer h2 {
+  line-height: 0.5;
+}
+
+footer h2 .counter {
+  width: 100%;
+  height: 20px;
+  background: red;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 750px) {
+  footer * {
+    text-align: center !important;
+  }
+}
+
 header {
   position: fixed;
   top: 0;
@@ -576,126 +737,4 @@ header #manuLogo h1 a:hover {
 
 section {
   background-image: url(http://kino.yaljournal.ru/img/hillynnanor5.jpg);
-}
-
-#new {
-  margin-top: 10vw;
-}
-
-#new .container {
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.01);
-  border: solid 1px #666;
-  border-radius: 10px;
-  box-shadow: 0 0 18px #999;
-  font-size: 13px;
-  color: #fff;
-}
-
-#new .container h2.title {
-  margin: 0 0 30px 0;
-  font-weight: bold;
-}
-
-#new .container hr {
-  width: 100%;
-  opacity: 0.5;
-  display: inline-block;
-  margin: 20px 0 10px 0;
-}
-
-#new .container .newFilm .text {
-  margin-top: 10px;
-  color: white;
-}
-
-#new .container .newFilm .title {
-  color: #ff0048;
-  display: inline-block;
-  border-bottom: 1px dashed #ff0048;
-  margin-bottom: 10px;
-  transition-duration: 0.5s;
-}
-
-#new .container .newFilm .imgBlock {
-  position: relative;
-}
-
-#new .container .newFilm .imgBlock img {
-  box-shadow: 0 0 7px #999;
-  max-width: 100%;
-  border: 5px solid white;
-  border-radius: 10px;
-  transition-duration: 0.5s;
-}
-
-#new .container .newFilm .imgBlock .hoverBlock {
-  background: black;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition-duration: 0.5s;
-  border: 0;
-  border-radius: 10px !important;
-}
-
-#new .container .newFilm .imgBlock .hoverBlock .playIco {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 0;
-  width: 0;
-  border-top: 20px solid transparent;
-  border-left: 40px solid #333;
-  border-bottom: 20px solid transparent;
-}
-
-.newFilm:hover > .imgBlock .hoverBlock {
-  opacity: 0.9 !important;
-}
-
-.newFilm:hover > .title {
-  color: white !important;
-  border-bottom: 1px dashed white !important;
-}
-
-.newFilm:hover > .imgBlock img {
-  border: 5px solid #ff0048 !important;
-  box-shadow: 0 0 0 !important;
-}
-
-@media (max-width: 750px) {
-  #new .newFilm {
-    text-align: center;
-  }
-  #new hr {
-    display: none !important;
-  }
-}
-
-footer {
-  margin-top: 10vw;
-  height: 47px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-top: solid 1px #666;
-  color: #fff;
-}
-
-footer h2 {
-  line-height: 0.5;
-}
-
-footer h2 .counter {
-  width: 100%;
-  height: 20px;
-  background: red;
-  margin: 0;
-  padding: 0;
 }
