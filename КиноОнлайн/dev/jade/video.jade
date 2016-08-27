@@ -44,9 +44,11 @@ html(lang='en')
 
 
         section
-            include video/like
+            - var sixBlockTitle = "Популярные фильмы:";
+            include global/sixBlock
+            //include video/like
             include video/last
-            include video/recommendedToYou
+            //include video/recommendedToYou
             include global/footer
 
         // jQuery (necessary for Bootstrap's JavaScript plugins)
