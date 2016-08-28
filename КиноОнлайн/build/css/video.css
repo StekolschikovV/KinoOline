@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-  font-size: 12px;
+  font-size: 10px;
 }
 
 a {
@@ -26,8 +26,13 @@ a:hover {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
 #sixBlock {
-  margin-top: 15vw;
+  margin-top: 8vw;
 }
 
 #sixBlock .container {
@@ -109,7 +114,7 @@ a:hover > .hoverInfoTipR {
   box-shadow: 0 0 18px #333;
   border-radius: 10px;
   width: 390px;
-  height: 230px;
+  height: 200px;
   z-index: 99;
 }
 
@@ -145,7 +150,6 @@ a:hover > .hoverInfoTipR {
 .hoverInfoTipR button:hover {
   background: #000000;
   background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
-  text-decoration: none;
 }
 
 .hoverInfoTipR button i {
@@ -171,7 +175,7 @@ a:hover > .hoverInfoTipB {
 }
 
 .hoverInfoTipB {
-  bottom: -100%;
+  bottom: -73%;
   left: 0;
   margin: auto;
   text-align: left;
@@ -183,7 +187,7 @@ a:hover > .hoverInfoTipB {
   box-shadow: 0 0 18px #333;
   border-radius: 10px;
   width: 390px;
-  height: 230px;
+  height: 190px;
   z-index: 99;
 }
 
@@ -220,7 +224,6 @@ a:hover > .hoverInfoTipB {
 .hoverInfoTipB button:hover {
   background: #000000;
   background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
-  text-decoration: none;
 }
 
 .hoverInfoTipB button i {
@@ -258,7 +261,7 @@ a:hover > .hoverInfoTipL {
   box-shadow: 0 0 18px #333;
   border-radius: 10px;
   width: 390px;
-  height: 230px;
+  height: 200px;
   z-index: 99;
 }
 
@@ -295,7 +298,6 @@ a:hover > .hoverInfoTipL {
 .hoverInfoTipL button:hover {
   background: #000000;
   background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
-  text-decoration: none;
 }
 
 .hoverInfoTipL button i {
@@ -313,7 +315,7 @@ a:hover > .hoverInfoTipL {
 }
 
 #threeBlock {
-  margin-top: 15vw;
+  margin-top: 8vw;
 }
 
 #threeBlock .threeBlockTopArr h2, #threeBlock .threeBlockBottomArr h2 {
@@ -444,7 +446,7 @@ a:hover > .hoverInfoTipL {
 }
 
 footer {
-  margin-top: 15vw;
+  margin-top: 8vw;
   height: 47px;
   background-color: rgba(0, 0, 0, 0.7);
   border-top: solid 1px #666;
@@ -589,7 +591,6 @@ header #manuLogo h1 a:hover {
 #video .darkLayer .filmInfoRight button:hover {
   background: #000000;
   background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
-  text-decoration: none;
 }
 
 #video .darkLayer .filmInfoRight button i {
@@ -615,4 +616,18 @@ header #manuLogo h1 a:hover {
 
 section {
   background-image: url(http://kino.yaljournal.ru/img/hillynnanor5.jpg);
+}
+
+.tagLinck {
+  margin-left: 10px;
+  color: #666;
+  text-decoration: none;
+  border-bottom: dotted 1px #666;
+  transition-duration: 0.5s;
+}
+
+.tagLinck:hover {
+  color: #ff0047;
+  text-decoration: none;
+  border-bottom: solid 1px #ff0047;
 }

@@ -15,7 +15,7 @@ h2 {
 }
 
 h3 {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 a {
@@ -26,13 +26,8 @@ a:hover {
   text-decoration: none;
 }
 
-.bold {
-  font-weight: bold;
-  margin-right: 5px;
-}
-
 #sixBlock {
-  margin-top: 8vw;
+  margin-top: 15vw;
 }
 
 #sixBlock .container {
@@ -114,7 +109,7 @@ a:hover > .hoverInfoTipR {
   box-shadow: 0 0 18px #333;
   border-radius: 10px;
   width: 390px;
-  height: 200px;
+  height: 230px;
   z-index: 99;
 }
 
@@ -176,7 +171,7 @@ a:hover > .hoverInfoTipB {
 }
 
 .hoverInfoTipB {
-  bottom: -73%;
+  bottom: -100%;
   left: 0;
   margin: auto;
   text-align: left;
@@ -188,7 +183,7 @@ a:hover > .hoverInfoTipB {
   box-shadow: 0 0 18px #333;
   border-radius: 10px;
   width: 390px;
-  height: 190px;
+  height: 230px;
   z-index: 99;
 }
 
@@ -263,7 +258,7 @@ a:hover > .hoverInfoTipL {
   box-shadow: 0 0 18px #333;
   border-radius: 10px;
   width: 390px;
-  height: 200px;
+  height: 230px;
   z-index: 99;
 }
 
@@ -318,7 +313,7 @@ a:hover > .hoverInfoTipL {
 }
 
 #threeBlock {
-  margin-top: 8vw;
+  margin-top: 15vw;
 }
 
 #threeBlock .threeBlockTopArr h2, #threeBlock .threeBlockBottomArr h2 {
@@ -449,7 +444,7 @@ a:hover > .hoverInfoTipL {
 }
 
 footer {
-  margin-top: 8vw;
+  margin-top: 15vw;
   height: 47px;
   background-color: rgba(0, 0, 0, 0.7);
   border-top: solid 1px #666;
@@ -526,217 +521,95 @@ header #manuLogo h1 a:hover {
   }
 }
 
-#slider {
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: yellow;
-}
-
-#slider .slide {
-  height: 100vh;
-  min-width: 100vw;
-  max-width: 100vw;
-  overflow: hidden;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
+#video {
   background-position: center !important;
-  box-shadow: inset 0px 50px 150px 150px rgba(0, 0, 0, 0.9);
+  background-size: cover !important;
 }
 
-#slider .slide .slideBG {
+#video .container {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 1px #666;
+  border-radius: 10px;
+  box-shadow: 0 0 18px #999;
+  font-size: 13px;
+  color: #fff;
+  padding: 20px;
+}
+
+#video .videoContainer {
+  margin: 0;
+  height: 0px;
+  display: none;
+  overflow: hidden;
+  transition-duration: 0.5s;
+}
+
+#video .videoContainer img {
+  border-radius: 10px;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  position: relative;
 }
 
-#slider .slide .slideBG .titleBlock {
-  position: absolute;
-  margin-left: 10%;
-  margin-top: 50vh;
-  color: #999;
-  background: rgba(0, 0, 0, 0.01);
-  border: solid 1px #666;
+#video .darkLayer {
+  padding-top: 15vh;
+  min-height: 80vh;
+  display: block;
+  box-shadow: inset 0px 0px 150px 100px black;
+}
+
+#video .darkLayer .poster img {
   border-radius: 10px;
-  box-shadow: 0 0 18px #999;
-  -webkit-animation-name: titleBlockShow;
-          animation-name: titleBlockShow;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
+  width: 100%;
+  max-width: 350px;
 }
 
-#slider .slide .slideBG .titleBlock h1, #slider .slide .slideBG .titleBlock h2 {
-  line-height: 0 !important;
-  padding: 0;
-  margin: 20px;
+#video .darkLayer .filmInfoRight h1, #video .darkLayer .filmInfoRight h2, #video .darkLayer .filmInfoRight h3 {
+  margin: 5px 0;
 }
 
-#slider .slide .slideBG .textBlock {
-  position: absolute;
-  z-index: 10;
+#video .darkLayer .filmInfoRight .SL {
+  height: 20px;
+  width: 100%;
   background: red;
-  margin-left: 10%;
-  margin-top: calc(50vh + 70px);
-  color: #999;
-  background: rgba(0, 0, 0, 0.01);
-  border: solid 1px #666;
-  border-radius: 10px;
-  box-shadow: 0 0 18px #999;
-  padding-bottom: 40px;
-  max-width: 50vw;
-  -webkit-animation-name: textBlockShow;
-          animation-name: textBlockShow;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
 }
 
-#slider .slide .slideBG .textBlock .text {
-  line-height: 1 !important;
-  padding: 0;
-  margin: 20px;
-}
-
-#slider .slide .slideBG .textBlock button {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
+#video .darkLayer .filmInfoRight button {
+  margin: 10px 0px;
   background: #000000;
   background-image: linear-gradient(to bottom, #f06489 0%, #f06489 46%, #ff0048 51%, #ff0048 100%);
   border-radius: 5px;
   border: 0;
   color: #ffffff;
-  font-size: 18px;
+  font-size: 14px;
   padding: 5px 15px;
   text-decoration: none;
   transition-duration: 0.5s;
   font-weight: bold;
 }
 
-#slider .slide .slideBG .textBlock button:hover {
+#video .darkLayer .filmInfoRight button:hover {
   background: #000000;
   background-image: linear-gradient(to bottom, #494949 0%, #494949 46%, black 51%, black 100%);
   text-decoration: none;
 }
 
-#slider .slide .slideBG .textBlock button i {
+#video .darkLayer .filmInfoRight button i {
   margin-left: 10px;
 }
 
-@media (max-width: 970px) {
-  #slider .titleBlock {
-    width: 80vw;
-    margin: auto !important;
-    left: 0;
-    right: 0;
-    top: 70px !important;
-  }
-  #slider .textBlock {
-    width: 80vw !important;
-    margin: auto !important;
-    left: 0;
-    right: 0;
-    top: 150px !important;
-    max-width: 100% !important;
+.showVideoContainer {
+  transition-duration: 0.5s;
+  height: auto !important;
+}
+
+@media (max-width: 992px) {
+  #video .darkLayer {
+    padding-top: 70px;
   }
 }
 
-@-webkit-keyframes titleBlockShow {
-  0% {
-    margin-left: -50%;
-    opacity: 0;
-  }
-  10% {
-    margin-left: -50%;
-    opacity: 0;
-  }
-  30% {
-    margin-left: 10%;
-    opacity: 1;
-  }
-  70% {
-    margin-left: 10%;
-    opacity: 1;
-  }
-  100% {
-    margin-left: -50%;
-    opacity: 0;
-  }
-}
-
-@keyframes titleBlockShow {
-  0% {
-    margin-left: -50%;
-    opacity: 0;
-  }
-  10% {
-    margin-left: -50%;
-    opacity: 0;
-  }
-  30% {
-    margin-left: 10%;
-    opacity: 1;
-  }
-  70% {
-    margin-left: 10%;
-    opacity: 1;
-  }
-  100% {
-    margin-left: -50%;
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes textBlockShow {
-  0% {
-    margin-left: 50%;
-    opacity: 0;
-  }
-  10% {
-    margin-left: 50%;
-    opacity: 0;
-  }
-  30% {
-    margin-left: 10%;
-    opacity: 1;
-  }
-  70% {
-    margin-left: 10%;
-    opacity: 1;
-  }
-  100% {
-    margin-left: 50%;
-    opacity: 0;
-  }
-}
-
-@keyframes textBlockShow {
-  0% {
-    margin-left: 50%;
-    opacity: 0;
-  }
-  10% {
-    margin-left: 50%;
-    opacity: 0;
-  }
-  30% {
-    margin-left: 10%;
-    opacity: 1;
-  }
-  70% {
-    margin-left: 10%;
-    opacity: 1;
-  }
-  100% {
-    margin-left: 50%;
-    opacity: 0;
+@media (max-width: 768px) {
+  #video * {
+    text-align: center;
   }
 }
 

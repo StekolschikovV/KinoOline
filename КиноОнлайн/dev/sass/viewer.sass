@@ -27,25 +27,50 @@ $color-pink: #ff0048
   &:hover
     background: #000000
     background-image: linear-gradient(to bottom, rgba(73,73,73,1) 0%, rgba(73,73,73,1) 46%, rgba(0,0,0,1) 51%, rgba(0,0,0,1) 100%)
+    text-decoration: none
   i
     margin-left: $iMarginLeft
 //mixins
 @import "global/global"
 @import "global/header"
-@import "video/video"
+
 section
   background-image: url(http://kino.yaljournal.ru/img/hillynnanor5.jpg)
-//@import "global/footer"
 
-.tagLinck
-  margin-left: 10px
-  color: #666
-  text-decoration: none
-  border-bottom: dotted 1px #666
-  transition-duration: 0.5s
-  &:hover
-    color: #ff0047
-    text-decoration: none
-    border-bottom: solid 1px #ff0047
+
+#tag
+  margin-top: 60px
+  .container
+    @include blockStyle
+    .tagTopArr, .tagBottomArr
+      a
+        h2
+          display: inline-block
+          color: #fff
+          font-weight: normal
+          text-decoration: none
+          border-bottom: dotted 1px #fff
+          transition-duration: 0.5s
+          &:hover
+            color: #ff0047
+            border-bottom: solid 1px #ff0047
+    .links
+      a
+        width: 100%
+        color: #999
+        display: block
+        border: dotted 1px #999
+        text-decoration: none
+        text-align: center
+        padding: 10px
+        max-height: 40px
+        margin: 5px 0
+        text-overflow: ellipsis
+        white-space: nowrap
+        overflow: hidden
+        transition-duration: 0.5s
+        &:hover
+          color: #ff0047
+          border: solid 1px #ff0047
 
 
